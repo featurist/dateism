@@ -1,0 +1,27 @@
+{
+  "name": "dateism",
+  "version": "0.0.1",
+  "description": "Yesterday today and tomorrow",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "date",
+    "test",
+    "manipulation"
+  ],
+  "author": "Derek Ekins <derek@featurist.co.uk>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/featurist/dateism.git"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.2.0"
+  },
+  "dependencies": {
+    "date-fns": "1.28.0"
+  }
+}
