@@ -1,5 +1,7 @@
 const addDays = require('date-fns/add_days')
 const formatDate = require('date-fns/format')
+const startOfDay = require('date-fns/start_of_day')
+const endOfDay = require('date-fns/end_of_day')
 
 class Dateism {
   constructor(format, seed) {
@@ -7,32 +9,41 @@ class Dateism {
     this.seed = seed || new Date()
   }
 
+  addDays (offset) {
+    const value = addDays(this.seed, offset)
+    return this.format(value)
+  }
+
   today () {
     return this.format(this.seed)
   }
 
   tomorrow () {
-    const value = addDays(this.seed, 1)
-    return this.format(value)
+    return this.addDays(1)
   }
 
   yesterday () {
-    const value = addDays(this.seed, -1)
-    return this.format(value)
+    return this.addDays(-1)
   }
 
   twoDaysAgo () {
-    const value = addDays(this.seed, -2)
-    return this.format(value)
+    return this.addDays(-2)
   }
 
   threeDaysAgo () {
-    const value = addDays(this.seed, -3)
-    return this.format(value)
+    return this.addDays(-3)
   }
   
   format (value) {
     return formatDate(value, this.formatPattern)
+  }
+
+  startOfDay () {
+    return new Dateism(this.formatPattern, startOfDay(this.seed))
+  }
+
+  endOfDay () {
+    return new Dateism(this.formatPattern, endOfDay(this.seed))
   }
 }
 
