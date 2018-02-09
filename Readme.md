@@ -28,3 +28,6 @@ dates.today()          // -> '15 Feb 1947'
 dates.tomorrow()       // -> '16 Feb 1947'
 dates.addDays(5)       // -> '20 Feb 1947'
 ```
+
+## We're Hiring!
+Featurist provides full stack, feature driven development teams. Want to join us? Check out [our career opportunities](https://www.featurist.co.uk/careers/).
