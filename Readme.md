@@ -1,4 +1,4 @@
-# dateism
+# dateism [![npm version](https://img.shields.io/npm/v/dateism.svg)](https://www.npmjs.com/package/dateism) [![npm](https://img.shields.io/npm/dm/dateism.svg)](https://www.npmjs.com/package/dateism) [![Build Status](https://travis-ci.org/featurist/dateism.svg?branch=master)](https://travis-ci.org/featurist/dateism)
 
 For lack of a better name...
 
