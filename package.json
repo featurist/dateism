@@ -1,6 +1,6 @@
 {
   "name": "dateism",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Yesterday today and tomorrow",
   "main": "index.js",
   "scripts": {
