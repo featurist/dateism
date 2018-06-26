@@ -4,7 +4,7 @@ const startOfDay = require('date-fns/start_of_day')
 const endOfDay = require('date-fns/end_of_day')
 
 class Dateism {
-  constructor(format, seed) {
+  constructor({format, seed} = {}) {
     this.formatPattern = format
     this.seed = seed || new Date()
   }
@@ -35,20 +35,23 @@ class Dateism {
   }
   
   format (value) {
-    return formatDate(value, this.formatPattern)
+    if (this.formatPattern) {
+      return formatDate(value, this.formatPattern)
+    }
+    return value.toISOString()
   }
 
   startOfDay () {
-    return new Dateism(this.formatPattern, startOfDay(this.seed))
+    return new Dateism({format: this.formatPattern, seed: startOfDay(this.seed)})
   }
 
   endOfDay () {
-    return new Dateism(this.formatPattern, endOfDay(this.seed))
+    return new Dateism({format: this.formatPattern, seed: endOfDay(this.seed)})
   }
 }
 
 
-module.exports = (format, seed) => {
-  return new Dateism(format, seed)
+module.exports = ({format, seed} = {}) => {
+  return new Dateism({format, seed})
 }
 

@@ -17,7 +17,7 @@ dateism must be initialised with a format to use and optionally a seed date. If 
 
 ```js
 const dateism = require('dateism')
-const dates = dateism('DD MMM YYYY', new Date('1947-02-15'))
+const dates = dateism({format: 'DD MMM YYYY', seed: new Date('1947-02-15')})
 
 dates.addDays(-5)      // -> '10 Feb 1947'
 dates.threeDaysAgo()   // -> '12 Feb 1947' 
